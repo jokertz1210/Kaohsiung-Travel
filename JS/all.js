@@ -57,13 +57,13 @@ function upData(nowAreas) {
       str += `
       <div class="col-sm-12 col-lg-6">
       <div class="card text-white bg-dark mb-3">
-      <div class="card-header d-flex justify-content-between"><span class="mr-auto">${name}</span><span class="mr-3 sapn-color">${ticketinfo}</span><img src="/images/icons_tag.png"></div>
+      <div class="card-header d-flex justify-content-between"><span class="mr-auto">${name}</span><span class="mr-3 sapn-color">${ticketinfo}</span><img src="images/icons_tag.png"></div>
       <img class="card-img-top crad-size" src="${picture}" alt="Card image cap">
 
       <div class="card-body">
-        <img class="pr-3" src="/images/icons_clock.png"><p class="card-text mb-2">${opentime}</p>
-        <img class="pr-3" src="/images/icons_pin.png"><p class="card-text mb-2">${add}</p>
-        <img class="pr-3" src="/images/icons_phone.png"><p class="card-text">${tel}</p>
+        <img class="pr-3" src="images/icons_clock.png"><p class="card-text mb-2">${opentime}</p>
+        <img class="pr-3" src="images/icons_pin.png"><p class="card-text mb-2">${add}</p>
+        <img class="pr-3" src="images/icons_phone.png"><p class="card-text">${tel}</p>
       </div>
     </div>
     </div>

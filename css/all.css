@@ -1,0 +1,121 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.nav-color {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner {
+  background-image: url("/images/wallpaper2you_122548.jpg");
+  height: 380px;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+  }
+}
+
+.btn-color {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.linearrow {
+  border-bottom: 2px dashed #784bbc;
+  height: 20px;
+}
+
+.linearrow .line {
+  color: #784bbc;
+}
+
+.linearrow .line i {
+  background-color: #ffff;
+}
+
+.crad-size {
+  max-height: 300px;
+  background-position: center center;
+  background-size: cover;
+}
+
+.areaName {
+  font-size: 48px;
+}
+
+.margin-b {
+  margin-bottom: 100px;
+}
+
+.sapn-color {
+  color: yellow;
+}
+/*# sourceMappingURL=all.css.map */

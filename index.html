@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <title>高雄旅遊資訊</title>
+</head>
+<body>
+  <div class="container margin-b">
+    <div class="row banner flex-column">
+      <nav class="navbar navbar-dark nav-color w-100">
+        <span class="navbar-brand mb-0 h1 font-weight-bold">高雄旅遊資訊網</span>
+      </nav>
+      <div class="col-md ml-4">
+        <h2 class="h5 text-white mt-3 text-center">行政區域導覽</h2>
+        <ul  class="app">
+          <li class="areasLi">
+            <button type="button" class="btn btn-outline-light mr-3 my-2 btn-color btName" v-for="area in areas">{{area}}</button>
+          </li>
+        </ul>
+      </div>  
+    </div>
+    <div class="linearrow w-100 mt-3">
+      <div class="text-center line">
+        <i class="far fa-arrow-alt-circle-down fa-2x"></i>
+        <h2 class="areaName mt-3"></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row" id="cardList">
+
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row ">
+      <nav class="navbar navbar-dark bg-dark w-100 d-flex justify-content-center">
+        <span class="font-weight-light text-white py-1">資料來源：高雄市政府</span>
+      </nav>
+    </div>
+  </div> 
+        
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="/JS/all.js"></script>
+</body>
+</html>

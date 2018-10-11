@@ -16,6 +16,15 @@ new Vue({
       nowAreas:'左營區'
     }
   },
+
+  created(){
+    axios.get(dataAddress).then((res)=>{
+      let vm = this;
+      vm.areasData = res.data.result.records
+    })
+    // 以上抓資料回來並儲存
+  },
+
   methods:{
     areasClick(e){
       let vm = this;
@@ -23,14 +32,9 @@ new Vue({
     // 以上選取位置
     }
   },
-  mounted() {
-    axios.get(dataAddress).then((res)=>{
-      let vm = this;
-      vm.areasData = res.data.result.records
-    })
-  }
+  
 })
-// 以上抓資料回來並儲存
+
 
 
 // let list = document.getElementById('cardList');

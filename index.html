@@ -1,54 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
   <title>高雄旅遊資訊</title>
 </head>
+
 <body>
-  <div class="container margin-b">
-    <div class="row banner flex-column">
-      <nav class="navbar navbar-dark nav-color w-100">
-        <span class="navbar-brand mb-0 h1 font-weight-bold">高雄旅遊資訊網</span>
-      </nav>
-      <div class="col-md ml-4">
-        <h2 class="h5 text-white mt-3 text-center">行政區域導覽</h2>
-        <ul  class="app">
-          <li class="areasLi">
-            <button type="button" class="btn btn-outline-light mr-3 my-2 btn-color btName" v-for="area in areas">{{area}}</button>
-          </li>
-        </ul>
-      </div>  
+  <div class="app">
+    <div class="container margin-b">
+      <div class="row banner flex-column">
+        <nav class="navbar navbar-dark nav-color w-100">
+          <span class="navbar-brand mb-0 h1 font-weight-bold">高雄旅遊資訊網</span>
+        </nav>
+        <div class="col-md- ml-4">
+          <h2 class="h5 text-white mt-3 text-center">行政區域導覽</h2>
+          <ul>
+            <li class="areasLi float-left" v-for="area in areas">
+              <button type="button" class="btn btn-outline-light mr-3 my-2 btn-color btName" v-on:click="areasClick">{{area}}</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="linearrow w-100 mt-3">
+        <div class="text-center line">
+          <i class="far fa-arrow-alt-circle-down fa-2x"></i>
+          <h2 class="areaName mt-3">{{nowAreas}}</h2>
+        </div>
+      </div>
     </div>
-    <div class="linearrow w-100 mt-3">
-      <div class="text-center line">
-        <i class="far fa-arrow-alt-circle-down fa-2x"></i>
-        <h2 class="areaName mt-3"></h2>
+    <!-- <pre> {{areasData}} </pre> -->
+    <!-- <pre> {{nowAreas}} </pre> -->
+    <div class="container">
+      <div class="row" >
+        <div class="col-sm-12 col-lg-6" v-for="item in areasData" v-if="nowAreas == item.Zone">
+          <div class="card text-white bg-dark mb-3" >
+            <div  class="card-header d-flex justify-content-between"><span class="mr-auto" >{{item.Name}}</span><span class="mr-3 sapn-color">{{item.Ticketinfo}}</span><img
+                src="images/icons_tag.png"></div>
+            <img class="card-img-top crad-size" :src="item.Picture1" alt="Card image cap">
+            <div class="card-body">
+              <img class="pr-3" src="images/icons_clock.png">
+              <p class="card-text mb-2">{{item.Opentime}}</p>
+              <img class="pr-3" src="images/icons_pin.png">
+              <p class="card-text mb-2">{{item.Add}}</p>
+              <img class="pr-3" src="images/icons_phone.png">
+              <p class="card-text">{{item.Tel}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row ">
+        <nav class="navbar navbar-dark bg-dark w-100 d-flex justify-content-center">
+          <span class="font-weight-light text-white py-1">資料來源：高雄市政府</span>
+        </nav>
       </div>
     </div>
   </div>
 
-  <div class="container">
-    <div class="row" id="cardList">
 
-    </div>
-  </div>
-  <div class="container ">
-    <div class="row ">
-      <nav class="navbar navbar-dark bg-dark w-100 d-flex justify-content-center">
-        <span class="font-weight-light text-white py-1">資料來源：高雄市政府</span>
-      </nav>
-    </div>
-  </div> 
-        
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="JS/all.js"></script>
 </body>
+
 </html>

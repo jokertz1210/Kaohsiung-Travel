@@ -18,21 +18,25 @@ new Vue({
   },
 
   created(){
-    axios.get(dataAddress).then((res)=>{
-      let vm = this;
-      vm.areasData = res.data.result.records
-    })
-    // 以上抓資料回來並儲存
+    this.getData()
+    // 掛載資料
   },
 
   methods:{
-    areasClick(e){
+    areasClick (e) {
       let vm = this;
       vm.nowAreas = e.target.textContent
     // 以上選取位置
+    },
+
+    getData () {
+      axios.get(dataAddress).then((res)=>{
+        let vm = this;
+        vm.areasData = res.data.result.records
+      })
     }
+    // 拿資料
   },
-  
 })
 
 

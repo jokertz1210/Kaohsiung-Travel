@@ -103,21 +103,3 @@ new Vue({
 // //   }
 // // }
 
-
-
-
-
-// let len = this.areasData.length;
-// for (let i = 0; i < len; i++) {
-//   if (nowAreas == this.areasData[i].Zone){
-//     this.chooseDatas = [
-//       picture = this.areasData[i].Picture1,
-//       name = this.areasData[i].Name,
-//       zone = this.areasData[i].Zone,
-//       opentime = this.areasData[i].Opentime,
-//       add = this.areasData[i].Add,
-//       tel = this.areasData[i].Tel,
-//       ticketinfo = this.areasData[i].Ticketinfo,
-//     ] 
-//   }
-// }

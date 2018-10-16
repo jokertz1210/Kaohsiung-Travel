@@ -4,7 +4,7 @@
   background-color: rgba(0,0,0,0.5);
 }
 .banner{
-  background-image: url('../images/FileArtPic.jpg');
+  background-image: url('../images/wallpaper2you_122548.jpg');
   height: 380px;
   background-position: bottom center;
   background-size: cover;
@@ -19,14 +19,17 @@
   background-color: rgba(0,0,0,0.7);
 }
 .linearrow{
-  border-bottom: 2px dashed #784bbc;
+  border-bottom: 2px dashed #343A40;
   height: 20px;
   .line{
-    color: #784bbc;
+    color: #343A40;
     i{
       background-color: #ffff;
     }
   }
+}
+.card-list{
+  height: 550px;
 }
 .crad-size{
   max-height: 300px;
@@ -35,6 +38,8 @@
 }
 .areaName{
   font-size: 48px;
+  font-family: Microsoft JhengHei;
+  color: #343A40;
 }
 .margin-b{
   margin-bottom: 100px;

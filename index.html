@@ -20,8 +20,8 @@
         <nav class="navbar navbar-dark nav-color w-100">
           <span class="navbar-brand mb-0 h1 font-weight-bold">高雄旅遊資訊網</span>
         </nav>
-        <div class="col-md- ml-4">
-          <h2 class="h5 text-white mt-3 text-center">行政區域導覽</h2>
+        <h2 class="h5 text-white mt-3 text-center">行政區域導覽</h2>
+        <div class="col-md- ml-5">
           <ul>
             <li class="areasLi float-left" v-for="area in areas">
               <button type="button" class="btn btn-outline-light mr-3 my-2 btn-color btName" v-on:click="areasClick">{{area}}</button>
@@ -41,7 +41,7 @@
     <div class="container">
       <div class="row" >
         <div class="col-sm-12 col-lg-6" v-for="item in areasData" v-if="nowAreas == item.Zone">
-          <div class="card text-white bg-dark mb-3" >
+          <div class="card text-white bg-dark mb-3  card-list" >
             <div  class="card-header d-flex justify-content-between"><span class="mr-auto" >{{item.Name}}</span><span class="mr-3 sapn-color">{{item.Ticketinfo}}</span><img
                 src="images/icons_tag.png"></div>
             <img class="card-img-top crad-size" :src="item.Picture1" alt="Card image cap">
